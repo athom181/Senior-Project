@@ -8,7 +8,7 @@ const Home = (props) => {
 		<div className="container">
 			<div className='flex-wrap flex-row d-flex justify-content-around align-items-stretch card mt-5 p-3'>
 				<div className="col-12 col-md-10 text-center p-3">
-					<h1>Water Utility Calculator App</h1>
+					<h1>Water Utility Bill Calculator</h1>
 					<h4>A basic breakdown of how your bill is calculated. For more information visit <a target="_blank" href="https://charlottenc.gov/Water/RatesBilling/Pages/CLTWRates.aspx">Charlotte Water</a>.</h4>				
 				</div>
 				<div>
