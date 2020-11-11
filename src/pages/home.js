@@ -44,7 +44,7 @@ const Home = (props) => {
 					<h3>
 						Commercial Rates &amp; Fees
 					</h3>
-					<h4>Water &amp Sewer Usage:</h4>
+					<h4>Water & Sewer Usage:</h4>
 					<ul>
 						<li>Water Charge per Ccf: $2.92</li>
 						<li>Sewer Charge per Ccf: $5.19</li>
