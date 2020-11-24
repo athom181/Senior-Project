@@ -7,7 +7,7 @@ const FirstCard = (props) => {
 		<section className="py-5d-flex flex-wrap overflow-hidden">
 			<div className='container first-card text-center flex-wrap flex-row d-flex justify-content-around align-items-center p-4'>
 				<h1 className="col-12 mb-4">
-					What type of account do you have? 
+					What Type of System do you have? 
 				</h1>
 				<div className="col-12 col-md-5 card pt-3" onClick={()=> props.onChange("R")}>
 					<h3>

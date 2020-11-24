@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../application.css';
 
   
-const Home = (props) => {
-
+const Home = () => {
+	const [width, setWidth] = useState(window.innerWidth)
+	useEffect(()=> {
+		window.addEventListener('resize', ()=> setWidth(window.innerWidth))
+	})
 	return (
 		<div className="container">
 			<div className='flex-wrap flex-row d-flex justify-content-around align-items-stretch card mt-5 p-3'>
 				<div className="col-12 col-md-10 text-center p-3">
-					<h1>Water Utility Bill Calculator</h1>
+					<h1>Water Utility Calculator App</h1>
 					<h4>A basic breakdown of how your bill is calculated. For more information visit <a target="_blank" href="https://charlottenc.gov/Water/RatesBilling/Pages/CLTWRates.aspx">Charlotte Water</a>.</h4>				
 				</div>
 				<div>
@@ -44,7 +47,7 @@ const Home = (props) => {
 					<h3>
 						Commercial Rates &amp; Fees
 					</h3>
-					<h4>Water & Sewer Usage:</h4>
+					<h4>Water &amp Sewer Usage:</h4>
 					<ul>
 						<li>Water Charge per Ccf: $2.92</li>
 						<li>Sewer Charge per Ccf: $5.19</li>
@@ -62,6 +65,7 @@ const Home = (props) => {
 						<li>Tier 2: (17+ CCf): $9.55</li>
 					</ul>
 				</div>
+				<iframe width={width > 600 ? "560" : "360"} height={width > 600 ? "315" : "210"} src="https://www.youtube.com/embed/mnEAcCMa9ZM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	);
