@@ -10,6 +10,11 @@ const ResidentialRates = (props) => {
 	const [irrigation, setIrrigation] = React.useState(0);
 	const [subtotal, setSubtotal] = React.useState(0);
 	const rates = [1.69, 2.18, 5.04, 5.04, 9.55];
+	const meter = {
+		"3/4": [1.29, 8.7],
+		"5/8": [1.29, 8.7],
+        "1": [3.22, 21.76],
+	};
 
 	const handleWithSewer = (e) => {
 		let s = 5.19 * (e > 16 ? 16 : e);
@@ -50,6 +55,9 @@ const ResidentialRates = (props) => {
 								Residential Rates
 						</h3>
 						<div className="col-12 d-flex flex-column justify-content-start align-items-start">
+							<div  className="col-6">
+                        		<Button type="select" className="select" value={meterSize} options={[3/4, 5/8, 1]} onChange={(e)=> setPrice(usage, e, irrigation, sewer)} /> <span className="pl-2">Meter Size</span>
+                    		</div>
 								<Input label="Number of CCFs Used" type="number" className="col-6" placeholder={0} min={0} max={10000} onChange={(e)=> handleWithSewer(e.target.value)} />
 								<Input label="Without Sewer" type="number" className="col-6" placeholder={0} min={0} max={10000} onChange={(e)=> handleWithoutSewer(e.target.value)} />
 								<Input label="Irrigation" type="number" className="col-6" placeholder={0} min={0} max={10000} onChange={(e)=> handleIrrigation(e.target.value)} />

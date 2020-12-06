@@ -10,7 +10,8 @@ const CommercialRates = (props) => {
     const [irrigation, setIrrigation] = React.useState(0);
     const [sewer, setSewer] = React.useState(false);
     const meter = {
-        "0.75": [1.29, 8.7],
+        "3/4": [1.29, 8.7],
+        "5/8": [1.29, 8.7],
         "1": [3.22, 21.76],
         "1.5": [6.45, 43.52],
         "2": [10.32, 69.63],
