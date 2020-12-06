@@ -18,8 +18,8 @@ const ResidentialRates = (props) => {
 			x += i < 16 ? rates[Math.floor(i/4)] : rates[4];
 		}
 		setWithSewer(e);
-		setWater(x.toFixed(1));
-		setSewer(s.toFixed(1));
+		setWater(x.toFixed(2));
+		setSewer(s.toFixed(2));
 		setSubtotal((x + Number(water) + Number(irrigation) + 8.44).toFixed(2));
 	}
 
@@ -50,7 +50,7 @@ const ResidentialRates = (props) => {
 								Residential Rates
 						</h3>
 						<div className="col-12 d-flex flex-column justify-content-start align-items-start">
-								<Input label="With Sewer" type="number" className="col-6" placeholder={0} min={0} max={10000} onChange={(e)=> handleWithSewer(e.target.value)} />
+								<Input label="Number of CCFs Used" type="number" className="col-6" placeholder={0} min={0} max={10000} onChange={(e)=> handleWithSewer(e.target.value)} />
 								<Input label="Without Sewer" type="number" className="col-6" placeholder={0} min={0} max={10000} onChange={(e)=> handleWithoutSewer(e.target.value)} />
 								<Input label="Irrigation" type="number" className="col-6" placeholder={0} min={0} max={10000} onChange={(e)=> handleIrrigation(e.target.value)} />
 						</div>
