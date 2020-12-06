@@ -18,8 +18,8 @@ const ResidentialRates = (props) => {
 			x += i < 16 ? rates[Math.floor(i/4)] : rates[4];
 		}
 		setWithSewer(e);
-		setWater(x.toFixed(2));
-		setSewer(s.toFixed(2));
+		setWater(x.toFixed(1));
+		setSewer(s.toFixed(1));
 		setSubtotal((x + Number(water) + Number(irrigation) + 8.44).toFixed(2));
 	}
 
