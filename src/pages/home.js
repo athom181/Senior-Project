@@ -69,7 +69,7 @@ const Home = () => {
 
 					<h4>Water Availability Fees</h4>
 					<ul>
-						<li>Water e/4" and 5/8" Connection Size: $1.29/month</li>
+						<li>Water 3/4" and 5/8" Connection Size: $1.29/month</li>
 						<li>Water 1" Connection Size: $3.22/month</li>
 						<li>Water 1 1/2" Connection Size: $6.45/month</li>
 						<li>Water 2" Connection Size: $10.32/month</li>
