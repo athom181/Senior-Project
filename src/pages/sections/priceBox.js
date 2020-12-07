@@ -30,14 +30,8 @@ const PriceBox = (props) => {
 			)}
 			{props.subtotal > 0 && (
 				<h4 className="px-3 bold">
-					Water Fixed Fees:  <span className="float-right">$4.22</span>
+					Fixed Fees:  <span className="float-right">$ 8.44</span>
 				</h4>	
-			)}
-
-			{props.subject > 0 && (
-				<h4 className="px-3 bold">
-					Sewer Fixed Fee:  <span className="float-right">$4.22</span>
-				</h4>
 			)}
 
 			<hr />
