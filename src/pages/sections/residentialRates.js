@@ -11,6 +11,8 @@ const ResidentialRates = (props) => {
 	const [irrigation, setIrrigation] = React.useState(0);
 	const [stormWater, setStormWater] = React.useState(0);
 	const [subtotal, setSubtotal] = React.useState(0);
+	const [meterSize, setMeterSize] = React.useState(.75);
+
 	const rates = [1.69, 2.18, 5.04, 5.04, 9.55];
 
 	const handleWithSewer = (e) => {
@@ -41,11 +43,25 @@ const ResidentialRates = (props) => {
 		setIrrigation(x);
 	}
 
-	const stormWaterPrice = 5.15
+	const stormWaterPrice = {
+		"None": 0,
+		"Tier 1": 7.57,
+		"Tier 2": 10.77,
+		"Tier 3": 15.44,
+		"Tier 4": 25.02,
+	}
+
+	const meter = {
+        "0.75": [1.29, 8.7],
+        "1": [3.22, 21.76]
+	};
+	
 	React.useEffect(()=> {
-		console.log(water, sewer, irrigation, stormWater)
-		setSubtotal(water + sewer + irrigation + stormWater);
-	}, [water, sewer, irrigation, stormWater])
+		const availability = water > 0 &&
+			(sewer > 0 ? meter[meterSize][0] + meter[meterSize][1] : meter[meterSize][0])
+		console.log(water, sewer, irrigation, stormWater, availability)
+		setSubtotal(water + sewer + irrigation + stormWater + availability);
+	}, [water, sewer, irrigation, stormWater, meterSize])
 	return (
 		<React.Fragment>
 			<div className="d-flex flex-column flex-wrap flex-md-row justify-content-start align-items-around">
@@ -53,6 +69,25 @@ const ResidentialRates = (props) => {
 				Residential Rates
 				</h3>
 				<div className="col-12 d-flex flex-column justify-content-start align-items-start">
+					<div className="col-6">
+                        <Button 
+                            type="select" 
+                            className="select" 
+                            value={meterSize} 
+                            options={[0.75, 1]} 
+                            onChange={(e)=> setMeterSize(e)} 
+                        /> 
+                            <span className="pl-2">Meter Size</span>
+                    </div>
+					<div className="col-6">
+                        <Button 
+                            type="select" 
+                            className="select" 
+                            options={["None", "Tier 1", "Tier 2", "Tier 3", "Tier 4"]} 
+                            onChange={(e)=> setStormWater(stormWaterPrice[e])} 
+                        /> 
+                            <span className="pl-2">Storm Water Runnoff</span>
+                    </div>
 					<Input 
 						label="With Sewer" 
 						type="number" 
@@ -80,20 +115,14 @@ const ResidentialRates = (props) => {
 						max={10000} 
 						onChange={(e)=> handleIrrigation(e.target.value)} 
 					/>
-					<div className="col-6">
-                        <Button 
-                            type="select" 
-                            className="select" 
-                            options={[0, 1, 2, 3, 4]} 
-                            onChange={(e)=> setStormWater(Number(e) * stormWaterPrice)} 
-                        /> 
-                            <span className="pl-2">Storm Water Runnoff</span>
-                    </div>
 				</div>
 			</div>
 			<PriceBox 
 				sewerUsage={sewer > 0 && sewer} 
 				waterUsage={water > 0 &&  water} 
+				sewerFee={sewer > 0} 
+                waterFee={water > 0} 
+				meter={meter[meterSize]} 
 				irrigationUsage={irrigation > 0 && irrigation} 
 				stormWater={stormWater > 0 && stormWater}
 				subtotal={subtotal} 

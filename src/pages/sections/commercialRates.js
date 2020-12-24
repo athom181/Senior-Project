@@ -4,11 +4,10 @@ import Button from '../components/button.js';
 import 	PriceBox from '../sections/priceBox.js';
 
 const CommercialRates = (props) => {
-	const [meterSize, setmeterSize] = React.useState(.75);
+	const [meterSize, setMeterSize] = React.useState(.75);
 	const [usage, setUsage] = React.useState(0);
     const [subtotal, setSubtotal] = React.useState(0);
     const [irrigation, setIrrigation] = React.useState(0);
-    const [stormWater, setStormWater] = React.useState(0);
     const [sewer, setSewer] = React.useState(false);
     const meter = {
         "0.75": [1.29, 8.7],
@@ -23,7 +22,6 @@ const CommercialRates = (props) => {
         "12": [341.7, 2306]
     };
 
-    const stormWaterPrice = 5.15
 
     const handleIrrigation = (e) => {
         let x = 0;
@@ -33,12 +31,11 @@ const CommercialRates = (props) => {
         return Number(x);
     }
 
-	const setPrice = ({u=usage, ms=meterSize, i=irrigation, s=sewer, sw=stormWater}) => {
+	const setPrice = ({u=usage, ms=meterSize, i=irrigation, s=sewer}) => {
         setIrrigation(i);
         setSewer(s);
         setUsage(u);
-        setmeterSize(ms);
-        setStormWater(sw);
+        setMeterSize(ms);
     }
     
     React.useEffect(()=> {
@@ -48,11 +45,11 @@ const CommercialRates = (props) => {
             (sewer ? meter[meterSize][0] + meter[meterSize][1] : meter[meterSize][0])
 
         setSubtotal(
-            usage + h + stormWater > 0 ? 
-            (Number(usage) * newSewer)  + Number(h) + (stormWater * stormWaterPrice) + availability
+            usage + h  > 0 ? 
+            (Number(usage) * newSewer)  + Number(h) + availability
             : 0
         );
-    }, [meterSize, usage, irrigation, stormWater, sewer])
+    }, [meterSize, usage, irrigation, sewer])
 
 	return (
 		<React.Fragment>
@@ -71,15 +68,6 @@ const CommercialRates = (props) => {
                             onChange={(e)=> setPrice({ms: e})} 
                         /> 
                             <span className="pl-2">Meter Size</span>
-                    </div>
-                    <div className="col-6">
-                        <Button 
-                            type="select" 
-                            className="select" 
-                            options={[0, 1, 2, 3, 4]} 
-                            onChange={(e)=> setPrice({sw: e})} 
-                        /> 
-                            <span className="pl-2">Storm Water Runnoff</span>
                     </div>
                     <Input 
                         label="Water Usage" 
@@ -107,7 +95,6 @@ const CommercialRates = (props) => {
                 meter={meter[meterSize]} 
                 irrigationUsage={irrigation > 0 && handleIrrigation(irrigation)} 
                 waterUsage={usage > 0 && (usage * 2.92)} 
-                stormWater={stormWater > 0 && (stormWater * stormWaterPrice)} 
                 sewerUsage={(sewer && usage > 0) && (usage * 5.19)} 
                 subtotal={subtotal > 0 ? subtotal : 0} 
             />
