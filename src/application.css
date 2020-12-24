@@ -73,6 +73,12 @@ nav .divider {
   background-color: #CCC;
 }
 
+.download {
+  max-width: 299px;
+  background-color: #0077be;
+  color: #f1f1f1;
+}
+
 .vh-100 {
   height: 100vh;
 }

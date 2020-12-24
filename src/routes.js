@@ -1,10 +1,12 @@
 
-import Rates from "./pages/rates.js";
+import Info from "./pages/info.js";
+import SampleBill from "./pages/sampleBill.js";
 import Home from "./pages/home.js";
 
 
 var indexRoutes = [
-  { path: "/bill-generator", name: "Rates", component: Rates },
+  { path: "/info", name: "Info", component: Info },
+  { path: "/sample", name: "Sample Bill", component: SampleBill },
   { path: "/", name: "Home", component: Home }
 ];
 
