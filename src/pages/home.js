@@ -14,7 +14,7 @@ const Home = () => {
 					<h1>Water Utility Bill Calculator</h1>
 					<h4>A basic breakdown of how your bill is calculated. For more information visit <a target="_blank" href="https://charlottenc.gov/Water/RatesBilling/Pages/CLTWRates.aspx">Charlotte Water</a>.</h4>				
 					<h4>PDF Example</h4>
-    					<p>Open a PDF file <a href="C:/Users/Thoma/Desktop/School/Fall 2020/ITSC 4850 - Senior Project I/srProject/Files/sample.pdf">example</a>.</p>
+    					<p>Open a PDF file <a href="Files/sample.pdf">example</a>.</p>
 				</div>
 				<div>
 					<h3>
