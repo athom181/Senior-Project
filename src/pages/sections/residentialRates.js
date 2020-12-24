@@ -52,21 +52,7 @@ const ResidentialRates = (props) => {
 				<h3 className="m-4">
 				Residential Rates
 				</h3>
-		
 				<div className="col-12 d-flex flex-column justify-content-start align-items-start">
-                    			<Input label="Sewer?" type="checkbox" className="pl-3" value={sewer} onChange={()=> setPrice({s: !sewer})} />
-                    			<div className="col-6">
-                       				 <Button 
-                            				type="select" 
-                            				className="select" 
-                            				value={meterSize} 
-                            				options={[0.75, 1, 1.5, 2, 3, 4, 6, 8, 10, 12]} 
-                            				onChange={(e)=> setPrice({ms: e})} 
-                        	/> 
-                            <span className="pl-2">Meter Size</span>
-                    </div>
-				<div className="col-12 d-flex flex-column justify-content-start align-items-start">
-					<Input
 					<Input 
 						label="With Sewer" 
 						type="number" 
