@@ -50,6 +50,14 @@ const Home = () => {
 						<li>Tier 1: (1-16 Ccf): $5.04</li>
 						<li>Tier 2: (17+ CCf): $9.55</li>
 					</ul>
+
+					<h4>Storm Water Fees</h4>
+					<ul>
+						<li>Tier 1:  Up to 1,999 square feet of impervious surface, $7.57 per month</li>
+						<li>Tier 2:  2,000 to 2,999 square feet of impervious surface, $10.77 per month </li>
+						<li>Tier 3:  3,000 to 4,999 square feet of impervious surface, $15.44 per month</li>
+						<li>Tier 4:  5,000 square feet or more, $25.02 per month</li>
+					</ul>
 				</div>
 				<div>
 					<h3>
