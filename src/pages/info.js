@@ -14,7 +14,7 @@ const Home = () => {
 					<h1>Water Utility Calculator App</h1>
 					<h4>A basic breakdown of how your bill is calculated. For more information visit <a target="_blank" href="https://charlottenc.gov/Water/RatesBilling/Pages/CLTWRates.aspx">Charlotte Water</a>.</h4>				
 					<h4>NOTE: This calculator will calculate bills for a 30 day period. The Fixed and Availability fees are billed based on how many days of service is on your bill.
-						This bill is set up to ONLY generate 30 day bills.
+						This bill is set up to ONLY generate 30 days of service.
 					</h4>
 				</div>
 				<div>
