@@ -111,7 +111,10 @@ const Home = () => {
 				</div>
 				<iframe width={width > 600 ? "560" : "360"} height={width > 600 ? "315" : "210"} src="https://www.youtube.com/embed/mnEAcCMa9ZM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
+
 		</div>
+		<h4>NOTE: The Fixed and Availability fees are set up to mirror 30 days of usage. Anything over or under the 30 days will change the price of the bill causing 
+				it to be a little bit high or lower depending on your days of service</h4>
 	);
 }
 
