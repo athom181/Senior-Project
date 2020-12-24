@@ -50,6 +50,15 @@ const Home = () => {
 						<li>Tier 1: (1-16 Ccf): $5.04</li>
 						<li>Tier 2: (17+ CCf): $9.55</li>
 					</ul>
+
+					<h4>Storm Water Fees</h4>
+					<ul>
+						<li>Tier I:    Up to 1,999 square feet of impervious surface, $7.57 per month </li>
+						<li>Tier II:   2,000 to 2,999 square feet of impervious surface, $10.77 per month  </li>
+						<li>Tier III:  3,000 to 4,999 square feet of impervious surface, $15.44 per month</li>
+						<li>Tier IV:  5,000 square feet or more, $25.02 per month </li>
+					</ul>
+
 				</div>
 				<div>
 					<h3>
@@ -101,14 +110,6 @@ const Home = () => {
 						<li>Tier 1: (1-16 Ccf): $5.04</li>
 						<li>Tier 2: (17+ CCf): $9.55</li>
 					</ul>
-
-					<h4>Storm Water Fees</h4>
-						<ul>
-							<li>Tier I:    Up to 1,999 square feet of impervious surface, $7.57 per month </li>
-							<li>Tier II:   2,000 to 2,999 square feet of impervious surface, $10.77 per month  </li>
-							<li>Tier III:  3,000 to 4,999 square feet of impervious surface, $15.44 per month</li>
-							<li>Tier IV:  5,000 square feet or more, $25.02 per month </li>
-						</ul>
 
 				</div>
 				<iframe width={width > 600 ? "560" : "360"} height={width > 600 ? "315" : "210"} src="https://www.youtube.com/embed/mnEAcCMa9ZM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
