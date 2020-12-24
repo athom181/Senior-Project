@@ -21,6 +21,7 @@ const PriceBox = (props) => {
 					Water Availability Fee:  <span className="float-right">$ {props.meter[0].toFixed(2)}</span>
 				</h4>	
 			)}
+			<hr />
 			{props.sewerUsage && (
 				<h4 className="px-3 bold">
 					Sewer Usage:  <span className="float-right">$ {props.sewerUsage.toFixed(2)}</span>
@@ -36,6 +37,7 @@ const PriceBox = (props) => {
 					Sewer Availability Fee:  <span className="float-right">$ {props.meter[1].toFixed(2)}</span>
 				</h4>	
 			)}
+			<hr />
 			{props.irrigationUsage && (
 				<h4 className="px-3 bold">
 					Irrigation Usage:  <span className="float-right">$ {props.irrigationUsage.toFixed(2)}</span>
