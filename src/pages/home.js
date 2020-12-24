@@ -112,6 +112,8 @@ const Home = () => {
 					</ul>
 
 				</div>
+				<p>Sample Bill <a href="C:\Users\Thoma\Desktop\School\Fall 2020\ITSC 4850 - Senior Project I\SAMPLE BILL">Bill</a></p>
+
 				<iframe width={width > 600 ? "560" : "360"} height={width > 600 ? "315" : "210"} src="https://www.youtube.com/embed/mnEAcCMa9ZM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			<h4>NOTE: The fixed and availability are monthly charges based on your days of service. The calculator is made to calculate for 30 days of service any thing
