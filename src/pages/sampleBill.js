@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from './components/button.js';
-
+import SampleBill from '../sample.pdf'
 import {
 	FirstCard,
 	CommercialRates,
@@ -8,20 +8,14 @@ import {
 } from "./sections/router.js";
 
 const Rates = (props) => {
-	const [position, setPosition] = useState("F");
-
-	const cards = {
-		"F": <FirstCard onChange={(e) => setPosition(e)} />,
-		"R": <ResidentialRates />,
-		"C": <CommercialRates />,
-	};
-
+	const download = () => SampleBill
 	return (
 		<div className="container flex-wrap flex-row d-flex justify-content-center align-items-center vh-100">
-			<div className="col-12 col-md-8" >
+			<div className="col-12 col-md-8 m-5">
 				<div className="card">
-					{ position !== "F" && <Button onClick={()=> setPosition("F")} value="back" className="back-btn" />}
-					{ cards[position] }
+					<a href={SampleBill} target="_blank">
+						<embed src={SampleBill} height="955px" width="100%" />
+					</a>
 				</div>
 			</div>
 		</div>
