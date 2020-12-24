@@ -11,8 +11,11 @@ const Home = () => {
 		<div className="container">
 			<div className='flex-wrap flex-row d-flex justify-content-around align-items-stretch card mt-5 p-3'>
 				<div className="col-12 col-md-10 text-center p-3">
-					<h1>Water Utility Calculator App</h1>
+					<h1>Water Utility Bill Calculator</h1>
 					<h4>A basic breakdown of how your bill is calculated. For more information visit <a target="_blank" href="https://charlottenc.gov/Water/RatesBilling/Pages/CLTWRates.aspx">Charlotte Water</a>.</h4>				
+					<h4>Here is a sample of a customers bill</h4>
+					<iframe src="C:\Users\Thoma\Desktop\School\Fall 2020\ITSC 4850 - Senior Project I\SAMPLE BILL" witdh="100%" height="500px">
+					</iframe>
 				</div>
 				<div>
 					<h3>
@@ -112,7 +115,7 @@ const Home = () => {
 					</ul>
 
 				</div>
-				<p>Sample Bill <a href="C:\Users\Thoma\Desktop\School\Fall 2020\ITSC 4850 - Senior Project I\SAMPLE BILL">Bill</a></p>
+				
 
 				<iframe width={width > 600 ? "560" : "360"} height={width > 600 ? "315" : "210"} src="https://www.youtube.com/embed/mnEAcCMa9ZM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
